@@ -1,3 +1,7 @@
+/*
+Daniel G. McLaughlin
+05/11/2016
+*/
 function drawingRandomizer() {
 	
 	var theDiv = document.getElementById("mainBody");
@@ -61,6 +65,18 @@ function factSphere() {
 
 /*
 function buildingType() {
+	
+}
+
+function () {
+	
+}
+
+function () {
+	
+}
+
+function () {
 	
 }
 */

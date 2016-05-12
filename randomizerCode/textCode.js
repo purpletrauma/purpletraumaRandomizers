@@ -61,6 +61,7 @@ function theMythicBall() {
 	document.getElementById("mythicalAnswers").innerHTML = "The 8-ball decrees: " + getTheBall();
 }
 
+
 function factSphereFacts() {
 	// Ensure it is empty.
 	document.getElementById("trueStatements").innerHTML = "";
