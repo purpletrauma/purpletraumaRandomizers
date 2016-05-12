@@ -17,12 +17,9 @@ function artThemeRandomizer() {
 		// Genre x2 option in pageChanger code.
 		document.getElementById("genreStyle").innerHTML = getGenre(settingIndex);
 	}
-	else if (settingIndex == 4) {
-		// Fanart.
-		document.getElementById("genreStyle").innerHTML = getFanart(settingIndex) + "<br>";
-	}
-	else if (settingIndex == 5) {
-		// Crossover
+
+	else {
+		// Fanart or crossover.
 		document.getElementById("genreStyle").innerHTML = getFanart(settingIndex) + "<br>";
 	}
 	
