@@ -7,15 +7,28 @@ function drawingRandomizer() {
 	var theDiv = document.getElementById("mainBody");
 
 	theDiv.innerHTML = '	<p>' +
+'Started as an "art theme randomizer" but became more a general theme randomizer.' + 
+'<br>' + 
 '			<form>' + 
-'				Fanart?:' + 
+'				Genre style:' + 
 '				<select id="fanart">' + 
-'					<option>No</option>' + 
-'					<option>Yes</option>' + 
-'					<option>Cross</option>' + 
+'					<option>genre</option>' + 
+'					<option>genre x2</option>' + 
+'					<option>genre x3</option>' + 
+'					<option>unusualGenre</option>' + 
+'					<option>Fanart</option>' + 
+'					<option>Crossover</option>' + 
 '				</select>' + 
 '				<br>' + 
-'				Unusual theme? (Interpret however you wish.):' + 
+'				Location Type?:' + 
+'				<select id="locationMenu">' + 
+'					<option>Natural</option>' + 
+'					<option>Small</option>' + 
+'					<option>Large</option>' + 
+'					<option>Huge</option>' + 
+'				</select>' + 
+'				<br>' +
+'				Unusual inspiration?:' + 
 '				<select id="unusualMenu">' + 
 '					<option>No</option>' + 
 '					<option>Yes</option>' + 
@@ -34,7 +47,7 @@ function drawingRandomizer() {
 '			</form>' + 
 '		</p>' + 
 '		<br><br>' + 
-'		<p id="genreTheme"> </p>' + 
+'		<p id="genreStyle"> </p>' + 
 '		<p id="environmentTheme"> </p>' + 
 '		<p id="actionVerb"> </p>' + 
 '		<p id="unusualTheme"> </p>' + 

@@ -3,13 +3,6 @@ Daniel G. McLaughlin
 05/11/2016
 */
 
-function getFanart () {
-	// List of favorite things to draw fanart of.
-	var fanartList = ["My Little Pony", "Steven Universe", "Pokemon", "Adventure Time", "Dropsy", "Cave Story", "Eversion", "Borderlands", "Portal", "Psychonauts", "Transistor", "Kaiba", "Courage The Cowardly Dog", "Lego", "Jungle Wa Itsumo Hale Nochi Gu", "Gravity Falls", "Game Grumps", "Nightvale", "Rick and Morty"];
-	shuffleArray(fanartList);
-	return fanartList[0];
-}
-
 
 
 function getVerb () {
@@ -21,11 +14,33 @@ function getVerb () {
 
 
 
-function getGenre() {
+function getGenre(theSetting) {
 	// List of genres to run with.
-	var secondaryGenreList = ["sci-fi", "cyberpunk", "fantasy", "action", "western", "nonsense", "romance", "tragedy", "drama", "comedy", "superhero", "mystery", "David Lynch", "crime", "horror"];
-	shuffleArray(secondaryGenreList);
-	return secondaryGenreList[0];
+	var genreList = ["Sci-Fi", "Fantasy", "Action", "Western", "Nonsense", "Romance", "Tragedy", "Drama", "Comedy", "Mystery", "Crime", "Horror", "Paranormal", "Superhero"];
+	shuffleArray(genreList);
+	
+	// Less standard genres.
+	var genreListExtreme = ["Lovecraftian", "Steampunk", "Splatterpunk", "Cyberpunk", "David Lynch"];
+	shuffleArray(genreListExtreme);
+	
+	
+	// Sort based on index, which is received if genre options chosen.
+	if (theSetting == 1) {
+		// Return dual genre.
+		return "Mix of: " + genreList[0] + " and " + genreList[1];
+	}
+	else if(theSetting == 2) {
+		// Three genres.
+		return "Mix of: " + genreList[0] + " and " + genreList[1] + " and " + genreList[2];
+	}
+	else if(theSetting == 3) {
+		// Unusual genre.
+		return "Genre: " + genreListExtreme[0];
+	}
+	else {
+		// Default to one genre.
+		return "Genre: " + genreList[0];
+	}
 }
 
 
@@ -39,41 +54,49 @@ function getMeme () {
 
 
 
-function getEnvironment () {
-	// List of possible locations to set it in.
-	var environmentList = ["Living Room", "Kitchen", "Backyard", "Attic", "Basement", "Laboratory", "Graveyard", "Forest", "Desert", ];
-	shuffleArray(environmentList);
-	return environmentList[0];
-}
-
-
-
-function getExpression() {
+function getExpression(expressionNumber) {
 	// List of expressions to run with.
 	var expressionList = ["Happy", "Sad", "Pleased", "Angry", "Confused", "Tired", "Shocked/Surprised", "Irritated", "WTF?!", "Triumph", "Fear", "Bereft", "Flirty", "Serious", "Silly", "hollow/blank", "incredulous", "confident", "fierce", "despondent/pouty", "drunk", "rage", "sarcastic", "disgusted", "ill/nauseous"];
 	shuffleArray(expressionList);
-	return expressionList[0];
+	var expressionAnswer = "";
+	for (var i = 0; i <= expressionNumber; i++) {
+		expressionAnswer = expressionAnswer + "Expression #" + (i + 1) + ": " + expressionList[0] + "<br>";
+		shuffleArray(expressionList);
+	}
+	return expressionAnswer;
 
 }
 
 
 
 function getCreatures(isWeird) {
+	var speciesList = ["Fairy", "Drider", "Naga", "Harpy", "Mermaids", "Dullahan", "Insect", "Scylia", "Ghost", "Cat"];
+	shuffleArray(speciesList);
+	
+	var speciesSociety = ["Militant", "Casual", "Seductive"];
+	shuffleArray(speciesSociety);
+	
+	var speciesFeature = ["Zombie", "Robot", "Pirate", "Ninja", "Pirateninja", "Cyborg"];
+	shuffleArray(speciesFeature);	
+	
+	
+	// If it just wants a regular species type.
 	if (isWeird = 0) {
-		var speciesList = ["fairies", "various creatures", "driders", "animals", "naga", "harpies", "mermaids", "dullahan", "insect people", "scylia", "ghosts", "cat girls"];
-		shuffleArray(speciesList);
+		return speciesList[0] + " people.";
 	}
 	else if (isWeird = 1) {
-		var speciesExtra = ["militant ", "casual ", "seductive "];
-		shuffleArray(speciesExtra);
-		speciesList[0] = speciesExtra[0] + speciesList[0];
+		// If they have a specific societal tint.
+
+		return speciesSociety[0] + " " + speciesList[0] + " people.";
+	}
+	else if (isWeird = 2) {
+		// Some nonsense extra.
+		return speciesFeature[0] + " " + speciesList[0] + " people.";
 	}
 	else {
-		var speciesExtra = ["zombie ", "robot ", "pirate ", "ninja ", "pirateninja ", "cyborg "];
-		shuffleArray(speciesExtra);
-		speciesList[0] = speciesExtra[0] + speciesList[0];
+		//Both tint and extra.
+		return speciesSociety[0] + " " + speciesFeature[0] + " " + speciesList[0] + " people.";
 	}
-	return speciesList[0];
 }
 
 
@@ -83,6 +106,7 @@ function getTheBall() {
 	shuffleArray(theMythicAnswer);
 	return theMythicAnswer[0];
 }
+
 
 
 function getFacts() {
@@ -151,21 +175,46 @@ function getFacts() {
 	return theTruth[0];
 }
 
+
+
+function getEnvironment(sizeVar) {
+	// Getting types of environments.
+
+
+	// 1 means small location.
+	if (sizeVar == 1) {
+		var locationSmall = ["Living Room", "Kitchen", "Backyard", "Attic", "Basement", "Laboratory"];
+		shuffleArray(locationSmall);
+		return locationSmall[0];
+	}
+	else if (sizeVar == 2) {
+		
+		// 2 means big location
+		var locationBig = ["Temple", "Amusement Park", "Train Station", "Shrine", "Graveyard"];
+		shuffleArray(locationBig);
+		return locationBig[0];
+	} 
+	else if (sizeVar == 3) {
+		// 3 means huge location.
+
+		var locationHuge = ["City", "Underground City", "space station"];
+		shuffleArray(locationHuge);
+		return locationHuge[0];
+	} 
+	else {
+		// 0 defaults to natural location.
+		var locationNatural = ["Forest", "Desert",];
+		shuffleArray(locationNatural);
+		return locationNatural[0];
+	}
+}
+
+
 /*
-
-function () {
-
-}
-
-
-
-function () {
-
-}
-
-
-
-function () {
-
+function getTheme() {
+	var theTheme = ["meta", "surreal", "cheery", "adorable", "creepy", "grimdark", "boring", "colorful", "candy", "dystopian"];
+	
+	shuffleArray(theTheme);
+	return theTheme[0];
 }
 */
