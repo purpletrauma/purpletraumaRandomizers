@@ -5,7 +5,7 @@ Daniel G. McLaughlin
 
 function getFanart () {
 	// List of favorite things to draw fanart of.
-	var fanartList = ["My Little Pony", "Steven Universe", "Pokemon", "Adventure Time", "Dropsy", "Cave Story", "Eversion", "Borderlands", "Portal", "Psychonauts", "Transistor", "Kaiba", "Courage The Cowardly Dog", "Lego", "Jungle Wa Itsumo Hale Nochi Gu", "Gravity Falls", "Game Grumps", "Nightvale", "Rick and Morty"];
+	var fanartList = ["My Little Pony", "Steven Universe", "Pokemon", "Adventure Time", "Dropsy", "Cave Story", "Eversion", "Borderlands", "Portal", "Psychonauts", "Transistor", "Kaiba", "Courage The Cowardly Dog", "Lego", "Jungle Wa Itsumo Hale Nochi Gu", "Gravity Falls", "Game Grumps", "Nightvale", "Rick and Morty", "Your Mom", "Firefly", "Aliens", "World of Warcraft", "Studio Ghibli"];
 	shuffleArray(fanartList);
 	return fanartList[0];
 }
@@ -14,7 +14,7 @@ function getFanart () {
 
 function getVerb () {
 	// List of action verbs.
-	var actionVerbList = ["jumping", "eating", "talking", "dancing", "shouting", "cooking", "thinking", "wanting", "wondering", "delivering", "competing", "writing", "giving", "judging", "inspecting", "showing", "reporting", "performing", "serving", "recording", "organizing", "repairing", "searching", "studying", "supporting", "solving", "tutoring", "succeeding", "failing"];
+	var actionVerbList = ["jumping", "eating", "talking", "dancing", "shouting", "cooking", "thinking", "wanting", "wondering", "delivering", "competing", "writing", "giving", "judging", "inspecting", "showing", "reporting", "performing", "serving", "recording", "organizing", "repairing", "searching", "studying", "supporting", "solving", "tutoring", "succeeding", "failing", "tossing", "chopping", "throwing", "smashing", "licking", "ignoring", "poking", "kicking"];
 	shuffleArray(actionVerbList);
 	return actionVerbList[0];
 }
@@ -23,7 +23,7 @@ function getVerb () {
 
 function getGenre() {
 	// List of genres to run with.
-	var secondaryGenreList = ["sci-fi", "cyberpunk", "fantasy", "action", "western", "nonsense", "romance", "tragedy", "drama", "comedy", "superhero", "mystery", "David Lynch", "crime", "horror"];
+	var secondaryGenreList = ["sci-fi", "cyberpunk", "fantasy", "action", "western", "nonsense", "romance", "tragedy", "drama", "comedy", "superhero", "mystery", "David Lynch", "crime", "horror", "samurai", "spy", "thriller", "Stephen King", "made-for-tv"];
 	shuffleArray(secondaryGenreList);
 	return secondaryGenreList[0];
 }
