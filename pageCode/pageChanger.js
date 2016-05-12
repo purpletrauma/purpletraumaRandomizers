@@ -1,6 +1,6 @@
 /*
 Daniel G. McLaughlin
-05/11/2016
+Created on: 05/11/2016
 */
 function drawingRandomizer() {
 	
