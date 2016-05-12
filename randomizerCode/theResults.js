@@ -1,79 +1,102 @@
 /*
 Daniel G. McLaughlin
-05/11/2016
+Created on: 05/11/2016
 */
-
-function getFanart () {
-	// List of favorite things to draw fanart of.
-	var fanartList = ["My Little Pony", "Steven Universe", "Pokemon", "Adventure Time", "Dropsy", "Cave Story", "Eversion", "Borderlands", "Portal", "Psychonauts", "Transistor", "Kaiba", "Courage The Cowardly Dog", "Lego", "Jungle Wa Itsumo Hale Nochi Gu", "Gravity Falls", "Game Grumps", "Nightvale", "Rick and Morty", "Your Mom", "Firefly", "Aliens", "World of Warcraft", "Studio Ghibli"];
-	shuffleArray(fanartList);
-	return fanartList[0];
-}
 
 
 
 function getVerb () {
 	// List of action verbs.
-	var actionVerbList = ["jumping", "eating", "talking", "dancing", "shouting", "cooking", "thinking", "wanting", "wondering", "delivering", "competing", "writing", "giving", "judging", "inspecting", "showing", "reporting", "performing", "serving", "recording", "organizing", "repairing", "searching", "studying", "supporting", "solving", "tutoring", "succeeding", "failing", "tossing", "chopping", "throwing", "smashing", "licking", "ignoring", "poking", "kicking"];
+	var actionVerbList = ["jumping", "eating", "talking", "dancing", "shouting", "cooking", "thinking", "wanting", "wondering", "delivering", "competing", "writing", "giving", "judging", "inspecting", "showing", "reporting", "performing", "serving", "recording", "organizing", "repairing", "searching", "studying", "supporting", "solving", "tutoring", "succeeding", "failing"];
 	shuffleArray(actionVerbList);
 	return actionVerbList[0];
 }
 
 
 
-function getGenre() {
+function getGenre(theSetting) {
 	// List of genres to run with.
-	var secondaryGenreList = ["sci-fi", "cyberpunk", "fantasy", "action", "western", "nonsense", "romance", "tragedy", "drama", "comedy", "superhero", "mystery", "David Lynch", "crime", "horror", "samurai", "spy", "thriller", "Stephen King", "made-for-tv"];
-	shuffleArray(secondaryGenreList);
-	return secondaryGenreList[0];
+	var genreList = ["Sci-Fi", "Fantasy", "Action", "Western", "Nonsense", "Romance", "Tragedy", "Drama", "Comedy", "Mystery", "Crime", "Horror", "Paranormal", "Superhero"];
+	shuffleArray(genreList);
+	
+	// Less standard genres.
+	var genreListExtreme = ["Lovecraftian", "Steampunk", "Splatterpunk", "Cyberpunk", "David Lynch"];
+	shuffleArray(genreListExtreme);
+	
+	
+	// Sort based on index, which is received if genre options chosen.
+	if (theSetting == 1) {
+		// Return dual genre.
+		return "Mix of: " + genreList[0] + " and " + genreList[1];
+	}
+	else if(theSetting == 2) {
+		// Three genres.
+		return "Mix of: " + genreList[0] + " and " + genreList[1] + " and " + genreList[2];
+	}
+	else if(theSetting == 3) {
+		// Unusual genre.
+		return "Genre: " + genreListExtreme[0];
+	}
+	else {
+		// Default to one genre.
+		return "Genre: " + genreList[0];
+	}
 }
 
 
 
 function getMeme () {
 	// List of unusual style themes to go with.
-	var memeRulesList = ["Killing grandpa", "I'M GONNA DUMP!", "Dickbutt.", "I'M LIKE A GIGOLO, READY TO BURST!", "You're making me angry. And when I get angry, I get horny. And I will be forced to have sex with you.", "My tits are broiling right now.", "You pizza shit!", "If you see something, say nothing, and drink to forget.", "If I had to do it all over again, I'd do it all over you.", "Exactly, exictly, and exoctly, in that order.", "They're fast asleep. Hand me the skull mallet; hold the teeth bucket in front of his cake hole.", "Just as I anticipated; I don't know what it is.", "My house burned down and I lost everything, again. It feels better every time.", "Unrequited love is a waste of time. Just walk it off. There. I said it.","I would have guessed that Dracula was the more realistic book, but we have to protect our families. If it sparkles, we can kill it.","For my birthday I bought myself a plan ticket to a whole new life, while someone else's friends crowded in the dark, waiting for the surprise.","The lake creature knows we are hunting her, but she also knows we are the first in years.","You can still back out before anyone gets hurt, but I did pack these lunches for bank robbers only.","Man, if I had tits I'd never leave the house, looking in a mirror all day, wishing I were prettier.","I used my one wish to make myself smarter. Smart enough to wish I was more kind.","My mom's buried out in these woods. She wanted her ashes scattered at sea, but it's like she always said 'No.'","What kind of person talks trash during a chess game? Someone looking to get shot.","I was sure the apocalypse would be awesome. But babies the size of cities? That is unsettling.","Maybe next year is the year. Maybe last year.","I wonder if the ugly duckling felt stupid when he realized being pretty didn't magically solve all his problems.","All my dreams came true. I just didn't think them through.","We broke every mirror trying to climb into a world where the car got hit by them.","I think most people find a lot of different things sexy. Why don't you go bug them?","Well, you're not wrong.","Life finds a way.","What do you mean it was in the other trunk?","I don't remember asking you a goddamned thing.","...Aliens.","I'm Spartacus.","Frankly Scarlet, I don't give a damn.","I can't get it straight no matter what I do..."];
+	var memeRulesList = ["Killing grandpa", "I'M GONNA DUMP!", "Dickbutt.", "I'M LIKE A GIGOLO, READY TO BURST!", "You're making me angry. And when I get angry, I get horny. And I will be forced to have sex with you.", "My tits are broiling right now.", "You pizza shit!", "If you see something, say nothing, and drink to forget.", "If I had to do it all over again, I'd do it all over you.", "Exactly, exictly, and exoctly, in that order.", "They're fast asleep. Hand me the skull mallet; hold the teeth bucket in front of his cake hole.", "Just as I anticipated; I don't know what it is.", "My house burned down and I lost everything, again. It feels better every time.", "Unrequited love is a waste of time. Just walk it off. There. I said it.","I would have guessed that Dracula was the more realistic book, but we have to protect our families. If it sparkles, we can kill it.","For my birthday I bought myself a plan ticket to a whole new life, while someone else's friends crowded in the dark, waiting for the surprise.","The lake creature knows we are hunting her, but she also knows we are the first in years.","You can still back out before anyone gets hurt, but I did pack these lunches for bank robbers only.","Man, if I had tits I'd never leave the house, looking in a mirror all day, wishing I were prettier.","I used my one wish to make myself smarter. Smart enough to wish I was more kind.","My mom's buried out in these woods. She wanted her ashes scattered at sea, but it's like she always said 'No.'","What kind of person talks trash during a chess game? Someone looking to get shot.","I was sure the apocalypse would be awesome. But babies the size of cities? That is unsettling.","Maybe next year is the year. Maybe last year.","I wonder if the ugly duckling felt stupid when he realized being pretty didn't magically solve all his problems.","All my dreams came true. I just didn't think them through.","We broke every mirror trying to climb into a world where the car got hit by them.","I think most people find a lot of different things sexy. Why don't you go bug them?","Well, you're not wrong."];
 	shuffleArray(memeRulesList);
 	return memeRulesList[0];
 }
 
 
 
-function getEnvironment () {
-	// List of possible locations to set it in.
-	var environmentList = ["Living Room", "Kitchen", "Backyard", "Attic", "Basement", "Laboratory", "Graveyard", "Forest", "Desert", ];
-	shuffleArray(environmentList);
-	return environmentList[0];
-}
-
-
-
-function getExpression() {
+function getExpression(expressionNumber) {
 	// List of expressions to run with.
 	var expressionList = ["Happy", "Sad", "Pleased", "Angry", "Confused", "Tired", "Shocked/Surprised", "Irritated", "WTF?!", "Triumph", "Fear", "Bereft", "Flirty", "Serious", "Silly", "hollow/blank", "incredulous", "confident", "fierce", "despondent/pouty", "drunk", "rage", "sarcastic", "disgusted", "ill/nauseous"];
 	shuffleArray(expressionList);
-	return expressionList[0];
+	var expressionAnswer = "";
+	for (var i = 0; i <= expressionNumber; i++) {
+		expressionAnswer = expressionAnswer + "Expression #" + (i + 1) + ": " + expressionList[0] + "<br>";
+		shuffleArray(expressionList);
+	}
+	return expressionAnswer;
 
 }
 
 
 
 function getCreatures(isWeird) {
+	var speciesList = ["Fairy", "Drider", "Naga", "Harpy", "Mermaids", "Dullahan", "Insect", "Scylia", "Ghost", "Cat"];
+	shuffleArray(speciesList);
+	
+	var speciesSociety = ["Militant", "Casual", "Seductive"];
+	shuffleArray(speciesSociety);
+	
+	var speciesFeature = ["Zombie", "Robot", "Pirate", "Ninja", "Pirateninja", "Cyborg"];
+	shuffleArray(speciesFeature);	
+	
+	
+	// If it just wants a regular species type.
 	if (isWeird = 0) {
-		var speciesList = ["fairies", "various creatures", "driders", "animals", "naga", "harpies", "mermaids", "dullahan", "insect people", "scylia", "ghosts", "cat girls"];
-		shuffleArray(speciesList);
+		return speciesList[0] + " people.";
 	}
 	else if (isWeird = 1) {
-		var speciesExtra = ["militant ", "casual ", "seductive "];
-		shuffleArray(speciesExtra);
-		speciesList[0] = speciesExtra[0] + speciesList[0];
+		// If they have a specific societal tint.
+
+		return speciesSociety[0] + " " + speciesList[0] + " people.";
+	}
+	else if (isWeird = 2) {
+		// Some nonsense extra.
+		return speciesFeature[0] + " " + speciesList[0] + " people.";
 	}
 	else {
-		var speciesExtra = ["zombie ", "robot ", "pirate ", "ninja ", "pirateninja ", "cyborg "];
-		shuffleArray(speciesExtra);
-		speciesList[0] = speciesExtra[0] + speciesList[0];
+		//Both tint and extra.
+		return speciesSociety[0] + " " + speciesFeature[0] + " " + speciesList[0] + " people.";
 	}
-	return speciesList[0];
 }
 
 
@@ -83,6 +106,7 @@ function getTheBall() {
 	shuffleArray(theMythicAnswer);
 	return theMythicAnswer[0];
 }
+
 
 
 function getFacts() {
@@ -151,21 +175,46 @@ function getFacts() {
 	return theTruth[0];
 }
 
+
+
+function getEnvironment(sizeVar) {
+	// Getting types of environments.
+
+
+	// 1 means small location.
+	if (sizeVar == 1) {
+		var locationSmall = ["Living Room", "Kitchen", "Backyard", "Attic", "Basement", "Laboratory"];
+		shuffleArray(locationSmall);
+		return locationSmall[0];
+	}
+	else if (sizeVar == 2) {
+		
+		// 2 means big location
+		var locationBig = ["Temple", "Amusement Park", "Train Station", "Shrine", "Graveyard"];
+		shuffleArray(locationBig);
+		return locationBig[0];
+	} 
+	else if (sizeVar == 3) {
+		// 3 means huge location.
+
+		var locationHuge = ["City", "Underground City", "space station"];
+		shuffleArray(locationHuge);
+		return locationHuge[0];
+	} 
+	else {
+		// 0 defaults to natural location.
+		var locationNatural = ["Forest", "Desert",];
+		shuffleArray(locationNatural);
+		return locationNatural[0];
+	}
+}
+
+
 /*
-
-function () {
-
-}
-
-
-
-function () {
-
-}
-
-
-
-function () {
-
+function getTheme() {
+	var theTheme = ["meta", "surreal", "cheery", "adorable", "creepy", "grimdark", "boring", "colorful", "candy", "dystopian"];
+	
+	shuffleArray(theTheme);
+	return theTheme[0];
 }
 */

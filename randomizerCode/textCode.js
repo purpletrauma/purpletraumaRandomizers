@@ -1,31 +1,34 @@
 /*
 Daniel G. McLaughlin
-05/11/2016
+Created on: 05/11/2016
 */
 function artThemeRandomizer() {
 
 	// Make sure everything is empty first.
-	document.getElementById("genreTheme").innerHTML = "";
+	document.getElementById("genreStyle").innerHTML = "";
 	document.getElementById("environmentTheme").innerHTML = "";	
 	document.getElementById("actionVerb").innerHTML = "";
 	document.getElementById("unusualTheme").innerHTML = "";
 	document.getElementById("expressions").innerHTML = "";
 
 	// Return fanart results, if requested, otherwise a genre.
-	var indexNumber = document.getElementById("fanart").selectedIndex;
-	if (indexNumber == 1) {
-		document.getElementById("genreTheme").innerHTML = "Fanart of: " + getFanart() + "<br>";
+	var settingIndex = document.getElementById("fanart").selectedIndex;
+	if (settingIndex < 4) {
+		// Genre x2 option in pageChanger code.
+		document.getElementById("genreStyle").innerHTML = getGenre(settingIndex);
 	}
-	else if (indexNumber == 2) {
-		document.getElementById("genreTheme").innerHTML = "Fanart of: " + getFanart() + " crossed with " + getFanart() + "<br>";
+	else if (settingIndex == 4) {
+		// Fanart.
+		document.getElementById("genreStyle").innerHTML = getFanart(settingIndex) + "<br>";
 	}
-	else {
-		// Give genre if no fanart.
-		document.getElementById("genreTheme").innerHTML = "Genre: " + getGenre();	
+	else if (settingIndex == 5) {
+		// Crossover
+		document.getElementById("genreStyle").innerHTML = getFanart(settingIndex) + "<br>";
 	}
 	
-	// Give environment.
-	document.getElementById("environmentTheme").innerHTML = "Location: " +  getEnvironment();
+	// Give environment, based on index choice.
+		var environmentIndex = document.getElementById("locationMenu").selectedIndex;
+	document.getElementById("environmentTheme").innerHTML = "Location: " +  getEnvironment(environmentIndex);
 	
 	// Give Verb
 	document.getElementById("actionVerb").innerHTML = "Action: " + getVerb();
@@ -33,7 +36,7 @@ function artThemeRandomizer() {
 	// Return unusualTheme results, if requested.
 	var indexNumber = document.getElementById("unusualMenu").selectedIndex;
 	if (indexNumber == 1) {
-		document.getElementById("unusualTheme").innerHTML = "Unusual theme: " + getMeme() + "<br>";
+		document.getElementById("unusualTheme").innerHTML = "--Interpret this as you wish.--" + "<br>" + "Unusual inspiration: " + getMeme() + "<br>";
 	}
 	else {}
 
@@ -41,16 +44,12 @@ function artThemeRandomizer() {
 	var i = 0;	
 	
 	// character expression outputs.
-	indexNumber = +document.getElementById("expressionNumber").value;
+	indexNumber = document.getElementById("expressionNumber").selectedIndex;
 	theParagraph = document.getElementById("expressions");
-	
-	//Make sure it's empty from previous clicks.
-	theParagraph.innerHTML = "";
 
-	while (i < indexNumber) {
-		theParagraph.innerHTML += "Expression #" + (i+1) + ": " + getExpression() + "<br>";
-		i++;
-	}
+	// Get expressions, based on number requested, and in a way that allows duplicates.
+	theParagraph.innerHTML = getExpression(indexNumber);
+
 }
 
 
