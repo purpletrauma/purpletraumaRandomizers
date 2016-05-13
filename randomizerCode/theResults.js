@@ -203,7 +203,7 @@ function getEnvironment(sizeVar) {
 	} 
 	else {
 		// 0 defaults to natural location.
-		var locationNatural = ["Forest", "Desert",];
+		var locationNatural = ["Forest", "Desert", "Plains", "Mountains", "Hills", "Ocean", "Lake", "Swamp"];
 		shuffleArray(locationNatural);
 		return locationNatural[0];
 	}
