@@ -1,7 +1,20 @@
 05/11/2016
- - Code first started, resulting in basic first randomizer.
+- Code first started, resulting in basic functional first randomizer.
+- 1.0
 - Purpletrauma
 
 05/12/2016
 - Uploaded to GIThub. Expanded how locations and genre/fanart is handled, and re-wrote a lot of background code. It functions the same, it's just a bit more versatile now.
+- 1.1
+- Purpletrauma
+
+05/13/2006
+- Trouble sleeping led to working on project for an extra couple hours.
+- Added "extra theme" setting.
+- Re-wrote how dropbox input handled in the js functions.
+- Implemented checkboxes.
+- Minor cosmetic changes.
+- Deleted duplicate textCode.js code; probably result of figuring out git.
+- Renamed "artThemeRandomizer" to just "themeRandomizer"
+- 1.2
 - Purpletrauma

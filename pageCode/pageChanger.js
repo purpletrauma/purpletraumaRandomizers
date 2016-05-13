@@ -2,7 +2,7 @@
 Daniel G. McLaughlin
 Created on: 05/11/2016
 */
-function drawingRandomizer() {
+function openThemeRandomizer() {
 	
 	var theDiv = document.getElementById("mainBody");
 
@@ -20,18 +20,14 @@ function drawingRandomizer() {
 '					<option>Crossover</option>' + 
 '				</select>' + 
 '				<br>' + 
+'				Extra theme?: <input type="checkbox" id="extraTheme">' + 
+'				<br>' +
 '				Location Type?:' + 
 '				<select id="locationMenu">' + 
 '					<option>Natural</option>' + 
 '					<option>Small</option>' + 
 '					<option>Large</option>' + 
 '					<option>Huge</option>' + 
-'				</select>' + 
-'				<br>' +
-'				Unusual inspiration?:' + 
-'				<select id="unusualMenu">' + 
-'					<option>No</option>' + 
-'					<option>Yes</option>' + 
 '				</select>' + 
 '				<br>' + 
 '				Number of expressions:' + 
@@ -42,16 +38,19 @@ function drawingRandomizer() {
 '					<option>4</option>' + 
 '				</select>' + 
 '				<br>' + 
-'				<input type="button" onclick="artThemeRandomizer()" ' + 
+'				Unusual inspiration?: <input type="checkbox" id="unusualBox">' + 
+'				<br>' + 
+'				<input type="button" onclick="themeRandomizer()" ' + 
 '				value="Randomize!">' + 
 '			</form>' + 
 '		</p>' + 
 '		<br><br>' + 
 '		<p id="genreStyle"> </p>' + 
+'		<p id="extraThemeDiv"> </p>' +
 '		<p id="environmentTheme"> </p>' + 
 '		<p id="actionVerb"> </p>' + 
-'		<p id="unusualTheme"> </p>' + 
-'		<p id="expressions"> </p>';
+'		<p id="expressions"> </p>' +
+'		<p id="unusualTheme"> </p>';
 }
 
 function theBall() {

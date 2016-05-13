@@ -27,19 +27,19 @@ function getGenre(theSetting) {
 	// Sort based on index, which is received if genre options chosen.
 	if (theSetting == 1) {
 		// Return dual genre.
-		return "Mix of: " + genreList[0] + " and " + genreList[1];
+		return genreList[0] + "/" + genreList[1];
 	}
 	else if(theSetting == 2) {
 		// Three genres.
-		return "Mix of: " + genreList[0] + " and " + genreList[1] + " and " + genreList[2];
+		return genreList[0] + "/" + genreList[1] + "/" + genreList[2];
 	}
 	else if(theSetting == 3) {
 		// Unusual genre.
-		return "Genre: " + genreListExtreme[0];
+		return genreListExtreme[0];
 	}
 	else {
 		// Default to one genre.
-		return "Genre: " + genreList[0];
+		return genreList[0];
 	}
 }
 
@@ -210,11 +210,10 @@ function getEnvironment(sizeVar) {
 }
 
 
-/*
+
 function getTheme() {
-	var theTheme = ["meta", "surreal", "cheery", "adorable", "creepy", "grimdark", "boring", "colorful", "candy", "dystopian"];
+	var theTheme = ["Meta", "Surreal", "Cheery", "Adorable", "Creepy", "Grimdark", "Boring", "Dystopian", "Lego"];
 	
 	shuffleArray(theTheme);
 	return theTheme[0];
 }
-*/
