@@ -30,6 +30,8 @@ function openThemeRandomizer() {
 '					<option>Huge</option>' + 
 '				</select>' + 
 '				<br>' + 
+'				Character action?: <input type="checkbox" id="haveAction">' + 
+'				<br>' +
 '				Number of expressions:' + 
 '				<select id="expressionNumber">' + 
 '					<option>1</option>' + 

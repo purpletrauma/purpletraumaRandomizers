@@ -47,7 +47,7 @@ function getGenre(theSetting) {
 
 function getMeme () {
 	// List of unusual style themes to go with.
-	var memeRulesList = ["Killing grandpa", "I'M GONNA DUMP!", "Dickbutt.", "I'M LIKE A GIGOLO, READY TO BURST!", "You're making me angry. And when I get angry, I get horny. And I will be forced to have sex with you.", "My tits are broiling right now.", "You pizza shit!", "If you see something, say nothing, and drink to forget.", "If I had to do it all over again, I'd do it all over you.", "Exactly, exictly, and exoctly, in that order.", "They're fast asleep. Hand me the skull mallet; hold the teeth bucket in front of his cake hole.", "Just as I anticipated; I don't know what it is.", "My house burned down and I lost everything, again. It feels better every time.", "Unrequited love is a waste of time. Just walk it off. There. I said it.","I would have guessed that Dracula was the more realistic book, but we have to protect our families. If it sparkles, we can kill it.","For my birthday I bought myself a plan ticket to a whole new life, while someone else's friends crowded in the dark, waiting for the surprise.","The lake creature knows we are hunting her, but she also knows we are the first in years.","You can still back out before anyone gets hurt, but I did pack these lunches for bank robbers only.","Man, if I had tits I'd never leave the house, looking in a mirror all day, wishing I were prettier.","I used my one wish to make myself smarter. Smart enough to wish I was more kind.","My mom's buried out in these woods. She wanted her ashes scattered at sea, but it's like she always said 'No.'","What kind of person talks trash during a chess game? Someone looking to get shot.","I was sure the apocalypse would be awesome. But babies the size of cities? That is unsettling.","Maybe next year is the year. Maybe last year.","I wonder if the ugly duckling felt stupid when he realized being pretty didn't magically solve all his problems.","All my dreams came true. I just didn't think them through.","We broke every mirror trying to climb into a world where the car got hit by them.","I think most people find a lot of different things sexy. Why don't you go bug them?","Well, you're not wrong."];
+	var memeRulesList = ["Killing grandpa", "I'M GONNA DUMP!", "Dickbutt.", "I'M LIKE A GIGOLO, READY TO BURST!", "You're making me angry. And when I get angry, I get horny. And I will be forced to have sex with you.", "My tits are broiling right now.", "You pizza shit!", "If you see something, say nothing, and drink to forget.", "If I had to do it all over again, I'd do it all over you.", "Exactly, exictly, and exoctly, in that order.", "They're fast asleep. Hand me the skull mallet; hold the teeth bucket in front of his cake hole.", "Just as I anticipated; I don't know what it is.", "My house burned down and I lost everything, again. It feels better every time.", "Unrequited love is a waste of time. Just walk it off. There. I said it.","I would have guessed that Dracula was the more realistic book, but we have to protect our families. If it sparkles, we can kill it.","For my birthday I bought myself a plan ticket to a whole new life, while someone else's friends crowded in the dark, waiting for the surprise.","The lake creature knows we are hunting her, but she also knows we are the first in years.","You can still back out before anyone gets hurt, but I did pack these lunches for bank robbers only.","Man, if I had tits I'd never leave the house, looking in a mirror all day, wishing I were prettier.","I used my one wish to make myself smarter. Smart enough to wish I was more kind.","My mom's buried out in these woods. She wanted her ashes scattered at sea, but it's like she always said 'No.'","What kind of person talks trash during a chess game? Someone looking to get shot.","I was sure the apocalypse would be awesome. But babies the size of cities? That is unsettling.","Maybe next year is the year. Maybe last year.","I wonder if the ugly duckling felt stupid when he realized being pretty didn't magically solve all his problems.","All my dreams came true. I just didn't think them through.","We broke every mirror trying to climb into a world where the car got hit by them.","I think most people find a lot of different things sexy. Why don't you go bug them?","Well, you're not wrong.","And close your eyes with holy dread for he on honey-dew hat fed, and drunk the milk of Paradise","They did not just jump the shark, but they jumped up and down on the shark screaming 'Look at me, I am Mr. Jumpy Sharko.'","Danger: Do Not Touch. Not only will this kill you, it will hurt the whole time you're dying.","Well yay! It looks like a lot of you wrote the IRS. Same tone, same content. And, um.. I don't think they were persuaded much. Looks like they're kind of mad now.","Don't you know anything about biology? The chest is reserved strictly for digestion!","So, in the end, the little boy was finally at peace with his own inevitable demise... for about 20 hours.","There's something I've always wanted to tell you.. you're ugly and no one will ever love you.","So, you have any pornography that simulates having a significant relationship? That is my fetish.","Chopping an onion is like being a kid on Christmas. You unwrap your present, and you try not to cry.","I hope that doesn't mean they have orgies..","The things I do for love.",""];
 	shuffleArray(memeRulesList);
 	return memeRulesList[0];
 }
@@ -183,27 +183,27 @@ function getEnvironment(sizeVar) {
 
 	// 1 means small location.
 	if (sizeVar == 1) {
-		var locationSmall = ["Living Room", "Kitchen", "Backyard", "Attic", "Basement", "Laboratory"];
+		var locationSmall = ["Living Room", "Kitchen", "Backyard", "Attic", "Basement", "Laboratory", "Bedroom", "Garage", "Shed", "Office", "Hall", "Staircase", "Closet", "Dungeon", "Bunker"];
 		shuffleArray(locationSmall);
 		return locationSmall[0];
 	}
 	else if (sizeVar == 2) {
 		
 		// 2 means big location
-		var locationBig = ["Temple", "Amusement Park", "Train Station", "Shrine", "Graveyard"];
+		var locationBig = ["Temple", "Amusement Park", "Train Station", "Shrine", "Graveyard", "Office Building", "Restaurant", "Factory"];
 		shuffleArray(locationBig);
 		return locationBig[0];
 	} 
 	else if (sizeVar == 3) {
 		// 3 means huge location.
 
-		var locationHuge = ["City", "Underground City", "space station"];
+		var locationHuge = ["City", "Town", "Underground City", "Space Station", "Hamlet", "Metropolis", "Ecumenopolis"];
 		shuffleArray(locationHuge);
 		return locationHuge[0];
 	} 
 	else {
 		// 0 defaults to natural location.
-		var locationNatural = ["Forest", "Desert", "Plains", "Mountains", "Hills", "Ocean", "Lake", "Swamp"];
+		var locationNatural = ["Forest", "Desert", "Plains", "Mountains", "Hills", "Ocean", "Lake", "Swamp", "Waterfall", "River", "Beach", "Canyon"];
 		shuffleArray(locationNatural);
 		return locationNatural[0];
 	}

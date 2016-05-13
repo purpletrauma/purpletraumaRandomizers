@@ -8,7 +8,7 @@
 - 1.1
 - Purpletrauma
 
-05/13/2006
+05/13/2016
 - Trouble sleeping led to working on project for an extra couple hours.
 - Added "extra theme" setting.
 - Re-wrote how dropbox input handled in the js functions.
@@ -17,4 +17,11 @@
 - Deleted duplicate textCode.js code; probably result of figuring out git.
 - Renamed "artThemeRandomizer" to just "themeRandomizer"
 - 1.2
+- Purpletrauma
+
+05/13/2016
+- Turned character action into an option.
+- Added a bunch of words to various arrays.
+- Finally starting to peter out after that first burst of motivation. Still; not bad for three days work.
+- 1.3
 - Purpletrauma

@@ -36,8 +36,11 @@ var extraTheme = "";
 		var environmentIndex = document.getElementById("locationMenu").selectedIndex;
 	document.getElementById("environmentTheme").innerHTML = "Location: " +  getEnvironment(environmentIndex);
 	
-	// Give Verb
-	document.getElementById("actionVerb").innerHTML = "Action: " + getVerb();
+	// Give Verb, if requested.
+	if (document.getElementById("haveAction").checked) {
+		document.getElementById("actionVerb").innerHTML = "Action: " + getVerb();
+	}
+
 	
 	// Return unusualTheme results, if requested.
 	if (document.getElementById("unusualBox").checked) {
