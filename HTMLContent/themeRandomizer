@@ -1,0 +1,38 @@
+<p>
+Started as an "art theme randomizer" but became more a general theme randomizer. 
+<br> 
+			<form> 
+				Genre style: 
+					<select ng-model="genreChoice" ng-options="genre.name for genre in genres" ng-init="genreChoice = genres[0]">
+					</select>
+				<br> 
+				Is it fan-themed?
+				<select ng-model="fanthemeChoice" ng-options="fantheme.name for fantheme in fanthemes" ng-init="fanthemeChoice = fanthemes[0]"> 
+				</select> 
+				<br>
+				Extra theme?: <input type="checkbox" ng-model="themeBox"> 
+				<br>
+					Location style?: <select ng-model="locationChoice" ng-options="location.name for location in locations" ng-init="locationChoice = locations[0]">
+					</select>
+				<br> 
+				Character action?: <input type="checkbox" ng-model="actionBox"> 
+				<br>
+				Number of expressions: 
+  				<select ng-model="expressionChoice" ng-options="expression.name for expression in expressions" ng-init="expressionChoice = expressions[0]">
+			  	</select>
+				<br> 
+				Unusual inspiration?: <input type="checkbox" ng-model="unusualBox"> 
+				<br> 
+				<input type="button" ng-click="themeRandomizer(genreChoice, fanthemeChoice, locationChoice, expressionChoice, themeBox, actionBox, unusualBox)"  
+				value="Randomize!"> 
+			</form> 
+		</p> 
+		<br><br>
+		<p ng-if="gotGenre == true">Genre of: {{theGenre}} </p> 
+		<p ng-if="gotFantheme == true">Fanwork of: {{theFantheme}} </p> 
+		<p ng-if="gotTheme == true">Theme style of: {{theTheme}} </p>
+		<p ng-if="gotLocation == true">Located at a/an: {{theLocation}} </p> 
+		<p ng-if="gotAction == true">Where someone is: {{theAction}} </p> 
+		<p ng-if="gotExpression">With expressions of: {{theExpression}}</p>
+		<p ng-if="gotUnusual"> Unusual inspiration; interpret as you wish. <br>----------<br> {{theUnusual}} </p>
+</p>

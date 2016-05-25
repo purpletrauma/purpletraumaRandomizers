@@ -1,0 +1,6 @@
+<div>
+	<input type="button" ng-click="theTruth()" value="Tell me a fact!"> 
+
+	<br><br> 
+	<p> {{aTruth}} </p>
+</div>

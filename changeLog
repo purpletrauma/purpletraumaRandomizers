@@ -1,11 +1,10 @@
 05/11/2016
 - Code first started, resulting in basic functional first randomizer.
-- 1.0
 - Purpletrauma
 
 05/12/2016
 - Uploaded to GIThub. Expanded how locations and genre/fanart is handled, and re-wrote a lot of background code. It functions the same, it's just a bit more versatile now.
-- 1.1
+- v1.1
 - Purpletrauma
 
 05/13/2016
@@ -16,12 +15,33 @@
 - Minor cosmetic changes.
 - Deleted duplicate textCode.js code; probably result of figuring out git.
 - Renamed "artThemeRandomizer" to just "themeRandomizer"
-- 1.2
 - Purpletrauma
 
 05/13/2016
 - Turned character action into an option.
 - Added a bunch of words to various arrays.
 - Finally starting to peter out after that first burst of motivation. Still; not bad for three days work.
-- 1.3
+- Purpletrauma
+
+05/14/2016
+- Various misc little additions to answers.
+- Failed to implement desired page loading functionality with Jquery or iFrames.
+- Purpletrauma
+
+05/19/2016
+- Got the page changer working with AngularJS.
+- The randomizers will take a bit more work.
+- Purpletrauma
+
+05/25/2016
+- Got the randomizers working with angularJS, cutting code used in half.
+- textCode.js removed as it was no longer referenced.
+- More odds and ends of items added to randomizers.
+- Extensive re-programming in general.
+- Hours of sifting through other's question answers to get it all working.
+- Why is the standard of, if something doesn't work, you create an extensive series of nested loops and functions, rather than find a way to do it more easily?
+- It shouldn't have taken me hours to find out that $scope is write only, and I should've been passing variables into the function.
+- Instead, everyone had some series of 10 to 50 lines of code that just made it work directly and usually inserted the desired variable into another function.
+- Stackoverflow is more frustrating than helpful.
+- So damn tired. Just sorta zoned out and kept working on it all last night.
 - Purpletrauma

@@ -3,10 +3,10 @@ Daniel G. McLaughlin
 Created on: 05/12/2016
 */
 	// Same as the functions from theResults
-function getFanart(theIndex) {
+function getFantheme(theIndex) {
 	var fanartList = ["My Little Pony", "Steven Universe", "Pokemon", "Adventure Time", "Dropsy", "Cave Story", "Eversion", "Borderlands", "Portal", "Psychonauts", "Transistor", "Kaiba", "Courage The Cowardly Dog", "Jungle Wa Itsumo Hale Nochi Gu", "Gravity Falls", "Game Grumps", "Nightvale", "Rick and Morty"];
 	shuffleArray(fanartList);
-	if (theIndex == 5) {
+	if (theIndex > 1 ) {
 		return fanartList[0] + " and " + fanartList[1];
 	}
 	else {

@@ -1,0 +1,6 @@
+<div>
+	<input type="button" ng-click="mythicSecret()"  
+	value="Give me a yes/no."> 
+	<br><br> 
+	<p> {{mythicAnswer}} </p>
+</div>
