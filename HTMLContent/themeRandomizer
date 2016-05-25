@@ -28,11 +28,11 @@ Started as an "art theme randomizer" but became more a general theme randomizer.
 			</form> 
 		</p> 
 		<br><br>
-		<p ng-if="gotGenre == true">Genre of: {{theGenre}} </p> 
-		<p ng-if="gotFantheme == true">Fanwork of: {{theFantheme}} </p> 
+		<p ng-if="gotGenre == true">Genre of: {{theGenre}} </p>
+		<p ng-if="gotFantheme == true">Fanwork of: {{theFantheme}} </p>
 		<p ng-if="gotTheme == true">Theme style of: {{theTheme}} </p>
-		<p ng-if="gotLocation == true">Located at a/an: {{theLocation}} </p> 
-		<p ng-if="gotAction == true">Where someone is: {{theAction}} </p> 
+		<p ng-if="gotLocation == true">Located at a/an: {{theLocation}}</p>
+		<p ng-if="gotAction == true">Where someone is: {{theAction}}</p>
 		<p ng-if="gotExpression">With expressions of: {{theExpression}}</p>
-		<p ng-if="gotUnusual"> Unusual inspiration; interpret as you wish. <br>----------<br> {{theUnusual}} </p>
+		<p ng-if="gotUnusual"> Unusual inspiration; interpret as you wish. <br>----------<br> <div ng-bind-html="theUnusual"> </div></p>
 </p>

@@ -1,4 +1,4 @@
-var myApp = angular.module('mainPage', []);
+var myApp = angular.module('mainPage', ["ngSanitize"]);
 
 myApp.controller('randomizers', function($scope) {
 	
