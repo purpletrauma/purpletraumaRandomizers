@@ -62,8 +62,8 @@ function getExpression(expressionNumber) {
 	expressionAnswer = expressionList[0];
 	if (expressionNumber > 1) {
 		for (var i =2; i <= expressionNumber; i++) {
-			expressionAnswer = expressionAnswer + " and " + expressionList[0];
 			shuffleArray(expressionList);
+			expressionAnswer = expressionAnswer + " and " + expressionList[0];
 		}
 	}
 	return expressionAnswer;
